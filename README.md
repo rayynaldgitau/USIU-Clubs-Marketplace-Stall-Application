@@ -1,9 +1,3 @@
-I can certainly create a comprehensive **README.md** file based on the provided HTML code for the USIU Clubs Marketplace Stall Application form.
-
-This document will cover the project's purpose, features, required files, and deployment instructions.
-
------
-
 # 📝 USIU Clubs Marketplace Stall Application Form
 
 ## ⭐ Project Overview
@@ -77,5 +71,3 @@ The provided HTML code is a **front-end template only**.
 | `wattage_estimate` | Number Input | Required if `needs_electricity` is checked. Min 50W, Max 3000W. |
 | `impact_justification` | Textarea | Required; Max **200 characters** for selection criteria. |
 | `data_consent` | Checkbox | Required; Must be checked to agree to terms and conditions. |
-
-Would you like me to help draft a basic **`styles.css`** file to make the form look presentable, or perhaps create a placeholder **`script.js`** to handle the character counter?
