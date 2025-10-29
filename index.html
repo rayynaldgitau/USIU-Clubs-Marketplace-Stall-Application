@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>USIU Clubs Marketplace - Stall Application</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <h1>USIU Clubs Marketplace Stall Application</h1>
+    <p>
+      <strong>Event Date:</strong> December 15, 2025 |
+      <strong>Limited Stalls Available</strong>
+    </p>
+    <p>
+      Complete this form to apply for a stall. Applications will be evaluated
+      based on fairness criteria including club category, expected impact,
+      safety considerations, and resource needs.
+    </p>
+
+    <form id="stallApplicationForm" novalidate>
+      <fieldset>
+        <legend>Club Information</legend>
+
+        <label for="club_name">Club Name *</label>
+        <input
+          type="text"
+          id="club_name"
+          name="club_name"
+          required
+          placeholder="Enter your club's full name"
+          aria-required="true"
+        />
+
+        <label for="club_category">Club Category *</label>
+        <select
+          id="club_category"
+          name="club_category"
+          required
+          aria-required="true"
+        >
+          <option value="">-- Select Category --</option>
+          <option value="community">Community Service</option>
+          <option value="tech">Technology & Innovation</option>
+          <option value="arts">Arts & Culture</option>
+          <option value="sports">Sports & Recreation</option>
+          <option value="academic">Academic & Professional</option>
+          <option value="media">Media & Communications</option>
+        </select>
+        <p class="help-text">Category helps us balance marketplace diversity</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Contact Person</legend>
+
+        <label for="contact_person">Full Name *</label>
+        <input
+          type="text"
+          id="contact_person"
+          name="contact_person"
+          required
+          aria-required="true"
+        />
+
+        <label for="contact_email">Email *</label>
+        <input
+          type="email"
+          id="contact_email"
+          name="contact_email"
+          required
+          placeholder="name@usiu.ac.ke"
+          aria-required="true"
+        />
+        <p class="help-text">Use your official USIU email for correspondence</p>
+
+        <label for="contact_phone">Phone Number *</label>
+        <input
+          type="tel"
+          id="contact_phone"
+          name="contact_phone"
+          required
+          placeholder="+2547XXXXXXXX"
+          aria-required="true"
+        />
+        <p class="help-text">Include country code (e.g., +254)</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Participation & Impact Metrics</legend>
+
+        <label>Prior Marketplace Participation *</label>
+        <div class="radio-group">
+          <label>
+            <input
+              type="radio"
+              name="prior_participation"
+              value="none"
+              required
+              aria-required="true"
+            />
+            First time applicant
+          </label>
+          <label>
+            <input type="radio" name="prior_participation" value="once" />
+            Participated once before
+          </label>
+          <label>
+            <input type="radio" name="prior_participation" value="twice" />
+            Participated 2+ times
+          </label>
+        </div>
+        <p class="help-text">New clubs receive priority consideration</p>
+
+        <label for="expected_footfall"
+          >Expected Footfall (visitors to your stall) *</label
+        >
+        <input
+          type="number"
+          id="expected_footfall"
+          name="expected_footfall"
+          required
+          min="10"
+          max="1000"
+          placeholder="e.g., 150"
+          aria-required="true"
+        />
+        <p class="help-text">Realistic estimate helps with space allocation</p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Stall Activity Details</legend>
+
+        <label>Items/Services to be Offered (check all that apply) *</label>
+        <div class="checkbox-group">
+          <label>
+            <input
+              type="checkbox"
+              name="items_sold[]"
+              value="merchandise"
+              required
+            />
+            Merchandise/Products
+          </label>
+          <label>
+            <input type="checkbox" name="items_sold[]" value="food" />
+            Food/Beverages
+          </label>
+          <label>
+            <input type="checkbox" name="items_sold[]" value="services" />
+            Services (consultation, workshops)
+          </label>
+          <label>
+            <input type="checkbox" name="items_sold[]" value="demo" />
+            Demonstrations/Exhibits
+          </label>
+          <label>
+            <input type="checkbox" name="items_sold[]" value="recruitment" />
+            Membership Recruitment Only
+          </label>
+        </div>
+        <p class="help-text">At least one option required</p>
+
+        <label for="risk_level">Risk Level of Activities *</label>
+        <select id="risk_level" name="risk_level" required aria-required="true">
+          <option value="">-- Select Risk Level --</option>
+          <option value="low">
+            Low (passive displays, information booths)
+          </option>
+          <option value="moderate">
+            Moderate (food handling, physical demos)
+          </option>
+          <option value="high">
+            High (open flames, electrical equipment, chemicals)
+          </option>
+        </select>
+        <p class="help-text">
+          High-risk activities require safety committee approval
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Power & Infrastructure Requirements</legend>
+
+        <label>
+          <input
+            type="checkbox"
+            id="needs_electricity"
+            name="needs_electricity"
+          />
+          My stall requires electricity
+        </label>
+
+        <label for="wattage_estimate">Estimated Wattage (W) *</label>
+        <input
+          type="number"
+          id="wattage_estimate"
+          name="wattage_estimate"
+          min="50"
+          max="3000"
+          placeholder="e.g., 500"
+          aria-describedby="wattage_help"
+        />
+        <p id="wattage_help" class="help-text">
+          Required if electricity is needed. Include all devices (laptops ~65W,
+          projectors ~300W)
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Impact Justification</legend>
+        <label for="impact_justification">
+          Why should your club receive a stall? (Max 200 characters) *
+        </label>
+
+        <textarea
+          id="impact_justification"
+          name="impact_justification"
+          required
+          maxlength="200"
+          placeholder="Describe your club's impact this year and what unique value you'll bring to the marketplace..."
+          aria-required="true"
+          aria-describedby="char_count"
+        >
+        </textarea>
+
+        <div id="char_count" class="char-counter">0 / 200 characters</div>
+        <p class="help-text">
+          Be specific: mention numbers, achievements, or unique offerings
+        </p>
+      </fieldset>
+
+      <fieldset>
+        <legend>Data Consent & Event Rules</legend>
+
+        <div class="consent-box">
+          <label>
+            <input
+              type="checkbox"
+              id="data_consent"
+              name="data_consent"
+              required
+              aria-required="true"
+            />
+            <span>
+              <strong>I consent to the following:</strong><br />
+              • My club's personal data (contact info, application details) will
+              be used solely for this Clubs Marketplace event<br />
+              • I have read and agree to the
+              <a href="#" aria-label="Event rules and safety guidelines"
+                >Event Rules & Safety Guidelines</a
+              ><br />
+              • I understand stalls are allocated based on fairness criteria and
+              availability<br />
+              • Data will be deleted within 30 days post-event per USIU's
+              <a href="#" aria-label="Data protection policy"
+                >Data Protection Policy</a
+              >
+            </span>
+          </label>
+        </div>
+      </fieldset>
+      
+      <button type="submit">Submit Application</button>
+    </form>
+  </body>
+</html>
+
+<!-- SAMPLE EXPECTED JSON STRUCTURE UPON SUBMISSION:
+{
+    "club_name": "Tech Innovation Club",
+    "club_category": "tech",
+    "contact_person": "Jane Doe",
+    "contact_email": "jane.doe@usiu.ac.ke",
+    "contact_phone": "+254712345678",
+    "prior_participation": "twice",
+    "expected_footfall": "150",
+    "items_sold[]": ["merchandise", "food"],
+    "risk_level": "low",
+    "needs_electricity": "on",
+    "wattage_estimate": "500",
+    "impact_justification": "Our coding workshops have reached 200+ students this year. This stall will showcase student-built apps and recruit new members for spring projects.",
+    "data_consent": "on"
+} -->
+
+<!-- DESIGN RATIONALE for using <textarea> instead of multiple checkboxes:
+            
+1. QUALITATIVE DEPTH: A textarea allows clubs to articulate their unique value proposition
+   in their own words rather than forcing them into predefined categories. Impact is 
+   nuanced and context-dependent - checkboxes would oversimplify.
+            
+2. DIFFERENTIATION: With limited stalls, selection committees need to distinguish between
+   similar applicants. Free-form text reveals authentic motivation, creativity, and 
+   specific evidence (e.g., "reached 200+ students") that checkboxes cannot capture.
+            
+3. FAIRNESS: Checkboxes advantage clubs that know "the right answers" to check. Open text
+   levels the playing field by letting substance speak rather than gaming a rubric.
+            
+4. EVIDENCE-BASED: The 200-char limit forces clubs to be specific and concrete rather than
+   vague. It's long enough for a meaningful claim with evidence, but short enough to 
+   prevent essay fatigue for reviewers.
+            
+5. BACKEND FLEXIBILITY: Text responses can be analyzed for keywords, sentiment, and 
+   specificity by reviewers or NLP tools, providing richer data than binary checkboxes. -->

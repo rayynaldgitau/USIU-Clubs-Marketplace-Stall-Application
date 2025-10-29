@@ -1,0 +1,104 @@
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 0 1.5rem;
+  line-height: 1.6;
+  color: #333;
+}
+h1 {
+  color: #1a472a;
+  border-bottom: 3px solid #1a472a;
+  padding-bottom: 0.5rem;
+}
+fieldset {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin: 1.5rem 0;
+  padding: 1rem 1.5rem;
+}
+legend {
+  font-weight: bold;
+  color: #1a472a;
+  padding: 0 0.5rem;
+}
+label {
+  display: block;
+  margin: 1rem 0 0.3rem;
+  font-weight: 500;
+}
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="number"],
+select,
+textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+input[type="radio"],
+input[type="checkbox"] {
+  margin-right: 0.5rem;
+}
+.radio-group,
+.checkbox-group {
+  margin: 0.5rem 0;
+}
+textarea {
+  resize: vertical;
+  min-height: 80px;
+}
+.char-counter {
+  font-size: 0.875rem;
+  color: #666;
+  text-align: right;
+  margin-top: 0.25rem;
+}
+.consent-box {
+  background: #f9f9f9;
+  padding: 1rem;
+  border-left: 4px solid #1a472a;
+  margin: 1rem 0;
+}
+.consent-box label {
+  display: flex;
+  align-items: start;
+  margin: 0;
+}
+.consent-box input[type="checkbox"] {
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+button {
+  background: #1a472a;
+  color: white;
+  padding: 0.75rem 2rem;
+  border: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 1rem;
+}
+button:hover {
+  background: #0f2a19;
+}
+button:disabled {
+  background: #999;
+  cursor: not-allowed;
+}
+
+.help-text {
+  font-size: 0.875rem;
+  color: #666;
+  margin-top: 0.25rem;
+}
+input:invalid:not(:placeholder-shown),
+select:invalid:not(:placeholder-shown),
+textarea:invalid:not(:placeholder-shown) {
+  border-color: #d00;
+}
