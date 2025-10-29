@@ -47,7 +47,6 @@ You need a modern web browser to view this form.
     # git clone [repository-url]
     # cd usiu-stall-application
     ```
-2.  **Create the CSS file:** Ensure a `styles.css` file exists in the same directory, or remove the line `<link rel="stylesheet" href="styles.css" />` from `index.html`.
 3.  **Open in Browser:** Open the `index.html` file directly in your web browser.
 
 ### Important Note on Functionality
